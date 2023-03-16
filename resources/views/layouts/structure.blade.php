@@ -22,6 +22,7 @@
         background-image: url("public/img/bg.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+        height: 100vh;
     }
 </style>
 </head>
