@@ -93,7 +93,7 @@
             </div>
         </div>
     </nav>
-    <input type="hidden" name="token" id="token" value="{{ $token }}">
+    <input type="hidden" name="token" id="token" value="{{ $token??'' }}">
     <!-- Start your project here-->
     <div class="col">
         @yield('content')
