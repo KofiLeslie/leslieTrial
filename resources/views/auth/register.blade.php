@@ -69,7 +69,7 @@
                                 </button>
                                 @if (Route::has('login'))
                             <a class="btn btn-link" href="{{ route('login') }}">
-                                {{ __('Already having an account? Login here') }}
+                                Already having an account? Login here
                             </a>
                         @endif
                             </div>
