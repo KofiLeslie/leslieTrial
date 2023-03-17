@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MediaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::controller(MediaController::class)->group(function () {
+        Route::post('/media', 'create');
+        Route::patch('/media/update/{media}', 'update');
+        Route::delete('/media/delete/{media}', 'delete');
+        // Route::get('/media', 'create');
+    });
 });

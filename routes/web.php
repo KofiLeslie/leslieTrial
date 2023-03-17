@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MediaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +23,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::controller(MediaController::class)->group(function(){
+//     Route::post('/media', 'create');
+//     Route::patch('/media/update/{media}', 'update');
+//     Route::delete('/media/delete/{media}', 'create');
+//     // Route::get('/media', 'create');
+// });

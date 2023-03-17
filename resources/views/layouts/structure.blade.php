@@ -18,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
     <!-- MDB -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap-login-form.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('sweetalert/sweetalert2.min.css') }}" />
     <style>
         body {
             background-image: url("{{ asset('img/bg.jpg') }}");
@@ -92,16 +93,20 @@
             </div>
         </div>
     </nav>
-
+    <input type="hidden" name="token" id="token" value="{{ $token }}">
     <!-- Start your project here-->
-    @yield('content')
+    <div class="col">
+        @yield('content')
+    </div>
 
     <!-- End your project here-->
 
     <!-- MDB -->
-    <script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script>
+    <script src="{{ asset('js/mdb.min.js') }}"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript"></script>
+    <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('sweetalert/sweetalert2.min.js') }}"></script>
+
 </body>
 
 </html>
